@@ -7,11 +7,11 @@ Proyek ini dikerjakan oleh kelompok dengan pembagian tugas sebagai berikut:
 
 | Nama | NIM | Peran | Tanggung Jawab Utama |
 | :--- | :--- | :--- | :--- |
-| **Shatsi Soluna** | 2211102151 | Project Manager & Documentation | Riset dataset, analisis awal, desain layout dashboard, dan penyusunan dokumentasi laporan lengkap |
-| **Khansa Setiifia A** | 2211102158 | Frontend Developer | Implementasi filter dinamis, integrasi scatter plot interaktif, testing, dan debugging sistem |
-| **Fatwa A'isy Irsyaad Zain Sundawa** | 2211102183 | UI/UX Designer | Pembuatan bar chart komparatif, implementasi summary cards, styling dengan Tailwind CSS, dan responsive design |
-| **Dimas Aditya Renatha** | 2211102199 | Interaction Developer | Implementasi tooltip interaktif, animasi dan transisi halus, serta optimasi performa rendering |
-| **Muhammad Maulana Fauzan** | 2211102218 | Data Engineer | Data cleaning dan preprocessing, implementasi reset filter, dan quality assurance |
+| **Shatsi Soluna** | 2211102151 | Report Writer & Documentation | Penyusunan laporan dan dokumentasi|
+| **Khansa Setiifia A** | 2211102158 | Data Analyst| Data cleaning dan preprocessing |
+| **Fatwa A'isy Irsyaad Zain Sundawa** | 2211102183 | UI/UX Designer | Bar chart komparatif dan styling Tailwind CSS |
+| **Dimas Aditya Renatha** | 2211102199 | Interaction Developer | Tooltip interaktif dan animasi transisi|
+| **Muhammad Maulana Fauzan** | 2211102218 | Visualization Specialist | Implementasi visualisasi data dan quality assurance |
 
 ---
 

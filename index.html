@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Performa Mahasiswa</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <aside class="sidebar-panel">
+            <header class="sidebar-header">
+                <h1>Dashboard</h1>
+                <p>Filter Data Mahasiswa</p>
+            </header>
+            
+            <div class="controls-wrapper">
+                <div class="control-section">
+                    <div class="control-section-title">DEMOGRAPHICS</div>
+                    
+                    <div class="control-group">
+                        <label>Rentang Usia (tahun)</label>
+                        <div class="age-range-control">
+                            <div class="range-inputs">
+                                <div class="range-input">
+                                    <input type="number" id="age-min-input" value="18" min="18" max="30">
+                                    <span>-</span>
+                                    <input type="number" id="age-max-input" value="30" min="18" max="30">
+                                </div>
+                            </div>
+                            <input type="range" class="range-slider" id="age-slider" 
+                                   min="18" max="30" value="18">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Gender</label>
+                        <div class="checkbox-group" id="gender-filter">
+                            <div><input type="checkbox" id="gen-1" value="Female"><label for="gen-1">Wanita</label></div>
+                            <div><input type="checkbox" id="gen-2" value="Male"><label for="gen-2">Pria</label></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-section">
+                    <div class="control-section-title">STUDY HABITS</div>
+                    
+                    <div class="control-group">
+                        <label>Kerja Paruh Waktu</label>
+                        <div class="checkbox-group" id="part-time-filter">
+                            <div><input type="checkbox" id="part-1" value="Yes"><label for="part-1">Ya</label></div>
+                            <div><input type="checkbox" id="part-2" value="No"><label for="part-2">Tidak</label></div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Ekstrakurikuler</label>
+                        <div class="checkbox-group" id="extra-filter">
+                            <div><input type="checkbox" id="ext-1" value="Yes"><label for="ext-1">Ya</label></div>
+                            <div><input type="checkbox" id="ext-2" value="No"><label for="ext-2">Tidak</label></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-section">
+                    <div class="control-section-title">HEALTH & LIFESTYLE</div>
+                    
+                    <div class="control-group">
+                        <label>Kualitas Diet</label>
+                        <div class="checkbox-group" id="diet-filter">
+                            <div><input type="checkbox" id="diet-1" value="Good"><label for="diet-1">Good</label></div>
+                            <div><input type="checkbox" id="diet-2" value="Fair"><label for="diet-2">Fair</label></div>
+                            <div><input type="checkbox" id="diet-3" value="Poor"><label for="diet-3">Poor</label></div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="mental-slider">Kesehatan Mental (Minimum)</label>
+                        <div class="slider-group">
+                            <input type="range" min="1" max="10" value="1" id="mental-slider">
+                            <span id="mental-value">1</span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="exercise-slider">Frekuensi Olahraga (Minimum)</label>
+                        <div class="slider-group">
+                            <input type="range" min="0" max="7" value="0" id="exercise-slider">
+                            <span id="exercise-value">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-section">
+                    <div class="control-section-title">BACKGROUND</div>
+                    
+                    <div class="control-group">
+                        <label>Pendidikan Ortu</label>
+                        <div class="checkbox-group" id="parent-filter">
+                            <div><input type="checkbox" id="par-1" value="Master"><label for="par-1">Master</label></div>
+                            <div><input type="checkbox" id="par-2" value="Bachelor"><label for="par-2">Bachelor</label></div>
+                            <div><input type="checkbox" id="par-3" value="High School"><label for="par-3">High School</label></div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Kualitas Internet</label>
+                        <div class="checkbox-group" id="internet-filter">
+                            <div><input type="checkbox" id="int-1" value="Good"><label for="int-1">Good</label></div>
+                            <div><input type="checkbox" id="int-2" value="Average"><label for="int-2">Average</label></div>
+                            <div><input type="checkbox" id="int-3" value="Poor"><label for="int-3">Poor</label></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </aside>
+
+        <main class="charts-area">
+            
+            <div class="dashboard-grid">
+                
+                <div class="chart-panel" id="panel-top-left">
+                    <div class="chart-title">Analisis Performa (Populasi Total)</div>
+                    <div class="dual-chart-container">
+                        <div id="diet-chart-container" class="svg-container">
+                            <div class="chart-subtitle">Rata-rata Nilai vs Kualitas Diet</div>
+                        </div>
+                        <div id="parent-chart-container" class="svg-container">
+                            <div class="chart-subtitle">Rata-rata Nilai vs Pendidikan Ortu</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-panel" id="panel-top-right">
+                    <div class="chart-title">Korelasi Utama: Jam Belajar vs Nilai</div>
+                    <div id="scatter-main-container" class="svg-container"></div>
+                </div>
+
+                <div class="chart-panel" id="panel-bottom-left">
+                    <div class="chart-title">Korelasi Tambahan</div>
+                    <div class="dual-chart-container">
+                        <div id="sleep-chart-container" class="svg-container">
+                            <div class="chart-subtitle">Jam Tidur vs Nilai</div>
+                        </div>
+                        <div id="social-chart-container" class="svg-container">
+                            <div class="chart-subtitle">Jam Medsos vs Nilai</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-panel" id="panel-bottom-right">
+                    <div class="chart-title">Distribusi Nilai (Hasil Filter)</div>
+                    <p class="chart-subtitle">Gunakan untuk mem-filter 3 scatter plot</p>
+                    <div id="histogram-container" class="svg-container"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="tooltip"></div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
